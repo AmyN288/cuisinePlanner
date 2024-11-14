@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Saveurs Partagées - Liste des Recettes">
+    <meta name="keywords" content="Recettes, Cuisine, Saveurs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liste des Recettes - Saveurs Partagées</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">/
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/logo2.png' %}" alt=""></a>
+        </div>
+
+    <h1>Liste de courses</h1>
+
+    <!-- Menu de navigation -->
+    <nav>
+        <a href="#rayon-frais">Rayon frais</a>
+        <a href="#viande-poisson">Viande / poisson</a>
+        <a href="#fruits">Fruits</a>
+        <a href="#legumes">Légumes</a>
+        <a href="#cremerie">Crèmerie</a>
+        <a href="#petit-dej">Petit déj</a>
+        <a href="#epicerie">Épicerie</a>
+        <a href="#surgeles">Surgelés</a>
+        <a href="#conserves">Conserves</a>
+        <a href="#boissons">Boissons</a>
+    </nav>
+
+    <!-- Rayon frais -->
+    <section id="rayon-frais">
+        <h2>Rayon frais</h2>
+        <ul>
+            <li>Œufs</li>
+            <li>Jambon</li>
+            <li>Lardons</li>
+            <li>Charcuterie</li>
+            <li>Surimi</li>
+            <li>Pâtes fraîches</li>
+            <li>Ravioli</li>
+            <li>Gnocchi</li>
+        </ul>
+    </section>
+
+    <!-- Viande / poisson -->
+    <section id="viande-poisson">
+        <h2>Viande / poisson</h2>
+        <ul>
+            <li>Bœuf</li>
+            <li>Porc</li>
+            <li>Poulet</li>
+            <li>Saucisses</li>
+            <li>Poisson</li>
+        </ul>
+    </section>
+
+    <!-- Fruits -->
+    <section id="fruits">
+        <h2>Fruits</h2>
+        <ul>
+            <li>Pommes</li>
+            <li>Bananes</li>
+            <li>Oranges</li>
+            <li>Clémentines</li>
+            <li>Mandarines</li>
+            <li>Poires</li>
+            <li>Raisin</li>
+            <li>Kiwi</li>
+            <li>Pastèque</li>
+            <li>Melon</li>
+            <li>Fruits séchés</li>
+            <li>Noix / noisettes</li>
+        </ul>
+    </section>
+
+    <!-- Légumes -->
+    <section id="legumes">
+        <h2>Légumes</h2>
+        <ul>
+            <li>Carottes</li>
+            <li>Tomates</li>
+            <li>Salade</li>
+            <li>Pommes de terre</li>
+            <li>Courgettes</li>
+            <li>Chou</li>
+            <li>Céleri</li>
+            <li>Brocoli</li>
+            <li>Oignons</li>
+            <li>Ail</li>
+        </ul>
+    </section>
+
+    <!-- Crèmerie -->
+    <section id="cremerie">
+        <h2>Crèmerie</h2>
+        <ul>
+            <li>Beurre</li>
+            <li>Yaourts</li>
+            <li>Fromage râpé</li>
+            <li>Mozzarella</li>
+            <li>Crème fraîche</li>
+        </ul>
+    </section>
+
+    <!-- Petit déj -->
+    <section id="petit-dej">
+        <h2>Petit déj</h2>
+        <ul>
+            <li>Céréales</li>
+            <li>Gâteaux</li>
+            <li>Brioche</li>
+            <li>Chocolat</li>
+            <li>Café</li>
+            <li>Thé</li>
+            <li>Cacao</li>
+            <li>Sucre</li>
+            <li>Confiture</li>
+            <li>Pâte à tartiner</li>
+        </ul>
+    </section>
+
+    <!-- Épicerie -->
+    <section id="epicerie">
+        <h2>Épicerie</h2>
+        <ul>
+            <li>Riz</li>
+            <li>Pâtes</li>
+            <li>Lentilles</li>
+            <li>Purée</li>
+            <li>Haricots</li>
+            <li>Semoule</li>
+            <li>Farine</li>
+            <li>Sel</li>
+            <li>Poivre</li>
+            <li>Bouillon (cubes)</li>
+            <li>Fines herbes</li>
+            <li>Moutarde</li>
+            <li>Mayonnaise</li>
+            <li>Ketchup</li>
+            <li>Sauce tomate</li>
+            <li>Huile</li>
+            <li>Vinaigre</li>
+            <li>Pain de mie</li>
+            <li>Soupe</li>
+            <li>Olives</li>
+            <li>Biscuits apéritifs</li>
+        </ul>
+    </section>
+
+    <!-- Surgelés -->
+    <section id="surgeles">
+        <h2>Surgelés</h2>
+        <ul>
+            <li>Steaks hachés</li>
+            <li>Viande hachée</li>
+            <li>Poisson pané</li>
+            <li>Pizza</li>
+            <li>Frites</li>
+            <li>Légumes</li>
+            <li>Plats cuisinés</li>
+            <li>Glaces</li>
+        </ul>
+    </section>
+
+    <!-- Conserves -->
+    <section id="conserves">
+        <h2>Conserves</h2>
+        <ul>
+            <li>Plats cuisinés</li>
+            <li>Pâté</li>
+            <li>Maïs</li>
+            <li>Thon</li>
+            <li>Maquereaux</li>
+            <li>Sardines</li>
+            <li>Légumes</li>
+            <li>Fruits</li>
+            <li>Petits pots bébé</li>
+            
+        </ul>
+    </section>
+
+    <!-- Boissons -->
+    <section id="boissons">
+        <h2>Boissons</h2>
+        <ul>
+            <li>Sodas</li>
+            <li>Eau</li>
+            <li>Eau gazeuse</li>
+            <li>Lait</li>
+            <li>Jus de fruits</li>
+            <li>Sirop</li>
+            <li>Bière</li>
+            <li>Vin</li>
+            <li>Apéritifs</li>
+            
+        </ul>
+    </section>
+    <!-- Plugins Js -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.slicknav.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/mixitup.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

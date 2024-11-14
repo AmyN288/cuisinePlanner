@@ -1,0 +1,31 @@
+{% load static %}
+<!-- templates/logout.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déconnexion</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Inclure vos styles CSS -->
+</head>
+<body>
+    <div class="container">
+        <h2>Se déconnecter</h2>
+        <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
+        <a href="{% url 'logout' %}">Se déconnecter</a> 
+        <br>
+        <a href="{% url 'login' %}">Annuler</a> <!-- Lien pour revenir à la page de connexion -->
+    </div>
+
+    <!-- Optionnel : affichage des messages d'erreur ou de succès -->
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>

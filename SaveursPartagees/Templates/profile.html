@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Utilisateur</title>
+</head>
+<body>
+    <!-- Section de Navigation -->
+    <nav>
+        {% if user.is_authenticated %}
+            <p>Bienvenue, {{ user.username }} !</p>
+            <a href="{% url 'logout' %}">Déconnexion</a>
+        {% else %}
+            <a href="{% url 'login' %}">Connexion</a>
+        {% endif %}
+    </nav>
+
+    <!-- Section du Profil -->
+    <h2>Votre Profil</h2>
+    {% if user.profile.image %}
+    <img src="{{ user.profile.image.url }}" alt="Photo de profil">
+{% else %}
+    <img src="{% static 'default.jpg' %}" alt="Photo de profil par défaut">
+{% endif %}
+
+    <p>Nom d'utilisateur : {{ user.username }}</p>
+    <p>Email : {{ user.email }}</p>
+
+    <!-- Lien pour Modifier le Profil -->
+    <a href="{% url 'profile' %}">Modifier votre profil</a>
+</body>
+</html>

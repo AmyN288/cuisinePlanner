@@ -1,0 +1,389 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SaveursPartagées</title>
+    
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">/
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo">
+                <a href="{% url 'index' %}"><img src="{% static 'img/logo2.png' %}" alt=""></a>
+            </div>
+            <div class="center-text">
+            <h2>Bienvenue dans l'univers des recettes partagées</h2>
+            </div>
+            
+        </section>
+            <div class="nav-menu">
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="#">Accueil</a></li>
+
+</li>
+<li><a href="{% url 'categories' %}">Catégories</a></li>
+<li><a href="{% url 'recipe' %}">Recettes</a></li>
+<li><a href="{% url 'listedecourses' %}">Liste de courses</a></li>
+<li><a href="{% url 'contact' %}">Contact</a></li>
+<li><a href="{% url 'deconnexion' %}">Déconnecter</a></li>
+
+</ul>
+</nav>
+<div class="nav-right search-switch">
+    <i class="fa fa-search"></i>
+</div>
+</div>
+<div id="mobile-menu-wrap"></div>
+</div>
+</header>
+<!-- Fin de l'en-tête -->
+
+<!-- Section des meilleures recettes en page d'accueil -->
+
+
+<section class="page-top-recipe">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 order-lg-2">
+                <div class="pt-recipe-item large-item">
+                    <div class="pt-recipe-img set-bg" data-setbg="{% static 'img/Cest-Bon.jpeg' %}">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <!-- Bouton pour voir les détails de la recette -->
+                    
+                    <div class="pt-recipe-text">
+                        <span>10 Aoute 2024</span>
+                        <h3>C’est Bon</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 order-lg-1">
+                <div class="pt-recipe-item">
+                    <div class="pt-recipe-img set-bg" data-setbg="{% static 'img/gateau au chocolat.jpeg' %}">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    
+                    <div class="pt-recipe-text">
+                         <a href="#">
+                         <h4>Un gâteau au chocolat riche et moelleux</h4>
+                         </a>
+                   
+                    </div>
+                </div>
+                <div class="pt-recipe-item">
+                    <div class="pt-recipe-img set-bg" data-setbg="{% static 'img/Jus de Bissap.jpeg' %}">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="pt-recipe-text">
+                        <h4> Jus de Bissap (d'hibiscus séchées)</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 order-lg-3">
+                <div class="pt-recipe-item">
+                    <div class="pt-recipe-img set-bg" data-setbg="{% static 'img/Pâtes-Carbonara.jpeg' %}">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="pt-recipe-text">
+                        <h4>Pâtes Carbonara</h4>
+                    </div>
+                </div>
+                <div class="pt-recipe-item">
+                    <div class="pt-recipe-img set-bg" data-setbg="{% static 'img/Poulet au curry.jpeg' %}">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="pt-recipe-text">
+                        <h4>Poulet au curry</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fin de la section des meilleures recettes en page d'accueil -->
+
+<!-- Section des recettes les plus populaires -->
+<section class="top-recipe spad">
+    <div class="section-title">
+        <h5>Recettes populaires cette semaine</h5>
+    </div>
+    <div class="container po-relative">
+        <div class="plus-icon">
+            <i class="fa fa-plus"></i>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="top-recipe-item large-item">
+                    <div class="top-recipe-img set-bg" data-setbg="{% static 'img/Fatayas.jpeg' %}">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="top-recipe-text">
+                        <div class="cat-name">Apéritif ou snack</div>
+                        <a href="#">
+                            <h4>Fataya (Beignets de viande)</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="top-recipe-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="top-recipe-img set-bg" data-setbg="{% static 'img/gateau Oreo.jpeg' %}">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="top-recipe-text">
+                                <div class="cat-name">Desset</div>
+                                <a href="#">
+                                    <h4>gateau Oreo</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-recipe-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="top-recipe-img set-bg" data-setbg="{% static 'img/top-recipe/recipe-3.jpg' %}">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="top-recipe-text">
+                                <div class="cat-name">Amateurs de viande</div>
+                                <a href="#">
+                                    <h4>Soupe aux légumes avec champignons</h4>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-recipe-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="top-recipe-img set-bg" data-setbg="{% static 'img/top-recipe/recipe-4.jpg' %}">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="top-recipe-text">
+                                <div class="cat-name">Dessert</div>
+                                <a href="#">
+                                    <h4>Glace au caramel avec des baies</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-recipe-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="top-recipe-img set-bg" data-setbg="{% static 'img/top-recipe/recipe-5.jpg' %}">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="top-recipe-text">
+                                <div class="cat-name">Dessert</div>
+                                <a href="#">
+                                    <h4>Poulpe frais avec jus de citron vert</h4>
+                                </a>
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     </section>
+     <!-- Fin de la section des recettes populaires -->
+
+
+    <!-- Section de Filtre des Catégories Début -->
+<div class="categories-filter-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="filter-item">
+                    <ul>
+                        <li class="active" data-filter="*">Végétarien</li>
+                        <li data-filter=".mostpopular">Les plus populaires</li>
+                        <li data-filter=".meatlover">Carnivore</li>
+                        <li data-filter=".glutenfree">Sans gluten</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cf-filter" id="category-filter">
+            <div class="cf-item mix all mostpopular">
+                <div class="cf-item-pic">
+                    <img src="{% static 'img/cate-filter/cate-filter-1.jpg' %}" alt="">
+                </div>
+                <div class="cf-item-text">
+                    <h5>Brunch du dimanche : Recette de spaghetti aux œufs</h5>
+                </div>
+            </div>
+            <div class="cf-item mix all mostpopular">
+                <div class="cf-item-pic">
+                    <img src="{% static 'img/cate-filter/cate-filter-2.jpg' %}" alt="">
+                </div>
+                <div class="cf-item-text">
+                    <h5>Brunch du dimanche : Recette de spaghetti aux œufs</h5>
+                </div>
+            </div>
+            <div class="cf-item mix all meatlover mostpopular">
+                <div class="cf-item-pic">
+                    <img src="{% static 'img/cate-filter/cate-filter-3.jpg' %}" alt="">
+                </div>
+                <div class="cf-item-text">
+                    <h5>Brunch du dimanche : Recette de spaghetti aux œufs</h5>
+                </div>
+            </div>
+            <div class="cf-item mix all meatlover">
+                <div class="cf-item-pic glutenfree">
+                    <img src="{% static 'img/cate-filter/cate-filter-4.jpg' %}" alt="">
+                </div>
+                <div class="cf-item-text">
+                    <h5>Brunch du dimanche : Recette de spaghetti aux œufs</h5>
+                </div>
+            </div>
+            <div class="cf-item mix all meatlover glutenfree">
+                <div class="cf-item-pic">
+                    <img src="{% static 'img/cate-filter/cate-filter-5.jpg' %}" alt="">
+                </div>
+                <div class="cf-item-text">
+                    <h5>Brunch du dimanche : Recette de spaghetti aux œufs</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Section de Filtre des Catégories Fin -->
+
+<!-- Section des Recettes en Vedette Début -->
+<section class="feature-recipe">
+    <div class="section-title">
+        <h5>Recettes en vedette</h5>
+    </div>
+    <div class="container po-relative">
+        <div class="plus-icon">
+            <i class="fa fa-plus"></i>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="fr-item">
+                    <div class="fr-item-img">
+                        <img src="{% static 'img/feature-1.jpg' %}" alt="">
+                    </div>
+                    <div class="fr-item-text">
+                        <h4>Brunch du dimanche : Recette de spaghetti aux œufs</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="fr-item">
+                    <div class="fr-item-img">
+                        <img src="{% static 'img/feature-2.jpg' %}" alt="">
+                    </div>
+                    <div class="fr-item-text">
+                        <h4>Brunch du dimanche : Recette de spaghetti aux œufs</h4>
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section des Recettes en Vedette Fin -->
+
+<!-- Section du Pied de Page Début -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="fs-left">
+                    <div class="logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'img/logo2.png' %}" alt="">
+                        </a>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <form action="#" class="subscribe-form">
+                    <h3>Abonnez-vous à notre newsletter</h3>
+                    <input type="email" placeholder="Votre e-mail">
+                    <button type="submit">S'abonner</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+                    <a href="#"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                    <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                    <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                    <a href="#"><i class="fa fa-youtube"></i><span>Youtube</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright-text">
+                    <!-- Le lien vers Colorlib ne peut pas être retiré. Ce modèle est sous licence CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | NDIAYE & NGOM <i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="https://colorlib.com" target="_blank"></a>
+                    <!-- Le lien vers Colorlib ne peut pas être retiré. Ce modèle est sous licence CC BY 3.0. -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Section du Pied de Page Fin -->
+
+<!-- Modèle de Recherche -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Rechercher ici.....">
+        </form>
+    </div>
+</div>
+<!-- Modèle de Recherche Fin -->
+
+<!-- Plugins Js -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.slicknav.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/mixitup.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Saveurs Partagées - Liste des Recettes">
+    <meta name="keywords" content="Recettes, Cuisine, Saveurs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liste des Recettes - Saveurs Partagées</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">/
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">/
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/logo2.png' %}" alt=""></a>
+        </div>
+
+    <header>
+        <h1 class="text-center my-4">les details de la recette  </details></h1>
+    </header>
+<body>
+    <h1>{{ details.recette.nom }}</h1>
+    {% if details.image_url %}
+    <img src="{{ Details_Recette.image_url }}" alt="Image de la recette" style="width: 300px; height: auto;">
+    {% endif %}
+
+    <h2>Catégorie</h2>
+    <p>{{ details.categorie.nom }}</p>
+
+    <h2>Description</h2>
+    <p>{{ details.description }}</p>
+
+    <h2>Instructions</h2>
+    <p>{{ details.instructions }}</p>
+
+    <h2>Temps de Préparation et de Cuisson</h2>
+    <ul>
+        <li>Temps de préparation : {{ details.temps_preparation }} minutes</li>
+        <li>Temps de cuisson : {{ details.temps_cuisson }} minutes</li>
+        <li>Nombre de portions : {{ details.portions }}</li>
+    </ul>
+
+    <h2>Date de Création</h2>
+    <p>{{ details.date_creation }}</p>
+
+    <h2>Commentaires</h2>
+    <ul>
+        {% for commentaire in commentaires %}
+            <li><strong>{{ commentaire.utilisateur.username }}</strong>: {{ commentaire.texte }} ({{ commentaire.date_com }})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Ajouter un commentaire</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <p><a href="{% url 'index' %}">Retour à l'accueil</a></p>
+</body>
+</html>
